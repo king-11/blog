@@ -1,0 +1,127 @@
+baseURL: http://king-11.github.io/blog
+languageCode: en-us
+title: Journeny in IIT
+theme: PaperMod
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+pygmentsUseClasses: true
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+languages:
+    en:
+      languageName: "English"
+      weight: 1
+      taxonomies:
+        category: categories
+        tag: tags
+        series: series
+      menu:
+          main:
+              - name: Archive
+                url: archives
+                weight: 5
+              - name: Search
+                url: search/
+                weight: 10
+              - name: Tags
+                url: tags/
+                weight: 10
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: Journey in IIT
+  description: "Journey of Lakshya Singh in IIT (BHU) Varanasi from a fresher, through COVID to final year going through many ups and downs, making friends along the way and finding my passion for programming and photography."
+  keywords: [Blog, Portfolio, PaperMod, IIT, College, Covid]
+  author: Lakshya Singh
+  images: ["eee.jpg"]
+  DateFormat: "January 2, 2006"
+  defaultTheme: dark
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: true
+
+  homeInfoParams:
+    Title: "king-11"
+    Content: >
+        Welcome to my blog about my transformation in college.
+
+        - Journey will be covered in parts currently I have planned on initiation and exploration more will be thought of as I proceed after first year.
+
+        - I will try to be brief but the emotions might flow :P so can't guarantee !
+
+
+  socialIcons:
+    - name: twitter
+      url: "https://twitter.com/1108King"
+    - name: github
+      url: "https://github.com/king-11"
+    - name: linkedin
+      url: "https://linkedin.com/in/lakshyasingh11"
+    - name: instagram
+      url: "https://instagram.com/cryptic_sniper"
+
+
+  cover:
+    hidden: true # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
+
+    # for search
+    # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+menu:
+  main:
+    - identifier: categories
+      name: categories
+      url: /categories/
+      weight: 10
+    - identifier: tags
+      name: tags
+      url: /tags/
+      weight: 20
+    - identifier: Portfolio
+      name: king-11
+      url: https://king-11.vercel.app
+      weight: 30
+  # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+markup:
+  highlight:
+    noClasses: false
+    # anchorLineNos: true
+    # codeFences: true
+    # guessSyntax: true
+    # lineNos: true
+    style: monokai
