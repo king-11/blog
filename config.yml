@@ -1,6 +1,6 @@
 baseURL: http://king-11.github.io/blog
 languageCode: en-us
-title: Journeny in IIT
+title: Backpacking Dream
 theme: PaperMod
 
 enableInlineShortcodes: true
@@ -43,7 +43,7 @@ outputs:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: Journey in IIT
+  title: Backpacking Dream
   description: "Journey of Lakshya Singh in IIT (BHU) Varanasi from a fresher, through COVID to final year going through many ups and downs, making friends along the way and finding my passion for programming and photography."
   keywords: [Blog, Portfolio, PaperMod, IIT, College, Covid]
   author: Lakshya Singh
