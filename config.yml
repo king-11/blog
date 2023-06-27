@@ -47,7 +47,7 @@ params:
   description: "Journey of Lakshya Singh in IIT (BHU) Varanasi from a fresher, through COVID to final year going through many ups and downs, making friends along the way and finding my passion for programming and photography."
   keywords: [Blog, Portfolio, PaperMod, IIT, College, Covid]
   author: Lakshya Singh
-  images: ["eee.jpg"]
+  images: ["programmer.jpeg"]
   DateFormat: "January 2, 2006"
   defaultTheme: dark
   disableThemeToggle: false

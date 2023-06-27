@@ -1,7 +1,11 @@
 ---
 title: "Initiation of a Faacha"
 date: 2023-06-22T12:46:54+05:30
-tags: ["first-year", "fresher", "faacha", "joining", "registraion", "induction"]
+tags: [Fresher, IIT BHU, induction]
+draft: true
+cover:
+    image: "./bhu-gate.jpeg"
+    relative: true
 ---
 
 ## Background JEE
@@ -35,7 +39,7 @@ I also recall `Neeraj Bhaiya` (CSE'21) , the SCS Head of the time coming over to
 
 I found out my roommates have made new friends, met `Kushal (MAT'24)` that day and maybe the other creatures from MNC department too who planned on taking over my room soon enough. which was the best thing that might have happened in the first year for me.
 
-![b208](/blog/b208.jpg)
+![b208](./b208.jpg)
 
 The campus initially felt like a maze in which I found myself lost without google maps but it was recommended not to use it because of its unreliability and preferring finding the ways out.
 

@@ -2,6 +2,9 @@
 title: "Reopen IIT BHU"
 date: 2021-09-07T13:30:51+05:30
 tags: ["campus4ug", "IITBHUAssemble", "reopenIITs"]
+cover:
+    image: "./eee.jpg"
+    relative: true
 ---
 
 # Why we need our Campus?
@@ -28,7 +31,7 @@ At one point, it was understandable not to call back students cause Covid19 **wa
 - Getting the necessary sleep in classes,
 - Watching the crowd at LC in evenings after class end.
 
-![dream](/blog/weekend.jpg)
+![dream](./weekend.jpg)
 
 > That wasn't all, the interaction with seniors taking parties from them talking with them interacting with your juniors and what not.
 
@@ -40,6 +43,6 @@ I think the third and fourth years are well aware of the **dream** that I am tal
 
 What I ask of you today my dear second years, third years and respected seniors is, please **don't lose hope**, don't go down that _rabbit hole_. Let's not stop because some things didn't go our way because even if there is a **0.0001%** chance that will make it into campus, **I will bloody take it**. The student community will bring about the change, will band together and make them agree to our requests.
 
-![captain america](/blog/captain.gif)
+![captain america](./captain.gif)
 
 > "whatever it takes".
