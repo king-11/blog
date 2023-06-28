@@ -3,7 +3,7 @@ title: "Vitess LFX Mentroship Fall 2021"
 date: 2021-12-21T13:26:46+05:30
 tags: [Open Source, Vitess, Go Language, MySQL, CNCF, LFX]
 cover:
-    image: "./lfx.webp"
+    image: "lfx.webp"
     relative: true
 ---
 

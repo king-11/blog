@@ -3,7 +3,7 @@ title: "OnCampus Microsoft Interview"
 date: 2021-08-10T13:22:41+05:30
 tags: [SDE, Interview, DSA, Projects, Internship, Microsoft]
 cover:
-    image: "./interview.webp"
+    image: "interview.webp"
     relative: true
 ---
 

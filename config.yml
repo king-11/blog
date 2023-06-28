@@ -44,8 +44,8 @@ outputs:
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Backpacking Dream
-  description: "Journey of Lakshya Singh in IIT (BHU) Varanasi from a fresher, through COVID to final year going through many ups and downs, making friends along the way and finding my passion for programming and photography."
-  keywords: [Blog, Portfolio, PaperMod, IIT, College, Covid]
+  description: "A blog site owned by Lakshya Singh previously a student at Indian Institute of Technology (BHU) Varanasi backpacking through different phases of life. Being a fresher, COVID lockdown, final year going through many ups and downs, making friends along the way and finding my passion for programming and photography."
+  keywords: [Blog, IIT, College, COVID, Indian Institute of Technology, Programming, Open Source]
   author: Lakshya Singh
   images: ["programmer.jpeg"]
   DateFormat: "January 2, 2006"
@@ -64,16 +64,16 @@ params:
   hidemeta: false
   hideSummary: false
   showtoc: true
-  tocopen: true
+  tocopen: false
 
   homeInfoParams:
     Title: "king-11"
     Content: >
-        Welcome to my blog about my transformation in college.
+        Welcome to my blog, where I write about my journey backpacking through terrains of the physical and digital realms.
 
-        - Journey will be covered in parts currently I have planned on initiation and exploration more will be thought of as I proceed after first year.
+        - I am writing a series of blogs about my journey in college, after which I will again switch back to the technical stuff.
 
-        - I will try to be brief but the emotions might flow :P so can't guarantee !
+        - I usually try to be brief, but sometimes it can turn in TL;DR!
 
 
   socialIcons:
@@ -90,7 +90,7 @@ params:
   cover:
     hidden: true # hide everywhere but not in structured data
     hiddenInList: true # hide on list pages and home
-    hiddenInSingle: true # hide on single page
+    hiddenInSingle: false # hide on single page
 
     # for search
     # https://fusejs.io/api/options.html

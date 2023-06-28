@@ -3,7 +3,7 @@ title: "Google Summer of Code 2021 Report"
 date: 2021-08-26T13:24:41+05:30
 tags: [Open Source, GSOC, Socket, Google, Computer Network, Chapel]
 cover:
-    image: "./report.webp"
+    image: "report.webp"
     relative: true
 ---
 

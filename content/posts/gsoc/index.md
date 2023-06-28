@@ -3,7 +3,7 @@ title: "Journey Google Summer of Code"
 date: 2021-07-05T13:18:46+05:30
 tags: [GSOC, Open Source, C, Web Development, Chapel]
 cover:
-    image: "./journey.webp"
+    image: "journey.webp"
     relative: true
 ---
 
