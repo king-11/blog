@@ -15,6 +15,13 @@ minify:
   disableXML: true
   minifyOutput: true
 
+enableRobotsTXT: true
+
+sitemap:
+  changefreq: weekly
+  filename: sitemap.xml
+  priority: 0.5
+
 languages:
     en:
       languageName: "English"
