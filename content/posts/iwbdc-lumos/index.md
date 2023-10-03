@@ -3,7 +3,7 @@ templateKey: blog-post
 id: IWBDC-Lumos-team
 title: "IWBDC | Legion of Legends"
 description: Team behind the Lumos, the Browser lighting India
-date: 2020-08-26T19:02:47.156Z
+date: 2023-09-22T19:02:47.156Z
 slug: /iwbdc/2023-lumos-ideation
 cover:
   image: "https://source.unsplash.com/Q1p7bh3SHj8/1600x900"
