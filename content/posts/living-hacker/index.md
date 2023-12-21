@@ -2,7 +2,7 @@
 title: The Hacker Way of Living
 date: 2023-11-20
 tags: ["tech", "product"]
-description: A documentation for people trying to break out of the subscription hell tacking paid services like Youtube Premium, Google One, Spotify Premium, Netlflix, UPI, ChatGPT, etc.
+description: A documentation for people trying to break out of the subscription hell tackling paid services like Youtube Premium, Google One, Spotify Premium, Netlflix, UPI, ChatGPT, etc.
 cover:
     image: 20231210125423850.webp
     relative: true
