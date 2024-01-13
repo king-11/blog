@@ -1,7 +1,7 @@
 ---
 title: "Google Summer of Code 2021 Report"
 date: 2021-08-26T13:24:41+05:30
-tags: [Open Source, GSOC, Socket, Google, Computer Network, Chapel]
+tags: [open-source, tech, gsoc]
 cover:
     image: "report.webp"
     relative: true
@@ -145,7 +145,7 @@ use Socket;
 use Time;
 
 proc main() {
-  config const host:string = "chapel-lang.org", port:uint(16) = 80;  
+  config const host:string = "chapel-lang.org", port:uint(16) = 80;
   const x = connect(host, port);
   const writer = x.writer();
   writer.writeln("hello world!");
@@ -175,7 +175,7 @@ proc main() {
 }
 ````
 
-We can utilize chapel `begin` to demonstrate UDP connections in a single program. 
+We can utilize chapel `begin` to demonstrate UDP connections in a single program.
 
 `begin` creates a new task or user-level thread which has a separate execution context from the main task/thread providing us capabilities for task parallelization.
 

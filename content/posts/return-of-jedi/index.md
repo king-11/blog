@@ -1,7 +1,7 @@
 ---
 title: "Return of The Jedi"
 date: 2023-07-04T11:14:10+05:30
-tags: [train, agra, malaiyo, friends]
+tags: [life, iit]
 cover:
     image: cover.jpg
     relative: true

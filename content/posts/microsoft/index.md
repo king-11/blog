@@ -1,13 +1,13 @@
 ---
 title: "OnCampus Microsoft Interview"
 date: 2021-08-10T13:22:41+05:30
-tags: [SDE, Interview, DSA, Projects, Internship, Microsoft]
+tags: [microsoft, life, tech]
 cover:
     image: "interview.webp"
     relative: true
 ---
 
-Microsoft is like a dream company for many people me included :P. 
+Microsoft is like a dream company for many people me included :P.
 
 Why won't it be its the company which develops typescript making web app development so much easier, VSCode favourite IDE of all developers 😌, Azure Cloud Services, Windows the first Operating System that most people use.
 
@@ -17,7 +17,7 @@ The Process Included two parts the Coding Round and then Interviews, based on wh
 
 ## Coding Round
 
-Microsoft provided us with two questions on Codility. The first one was an easy greedy + sorting question where you have to check by using available cranes can an object be moved from `B` to `E`. Sort the `(crane position - length , crane position + length)` then keep on moving B till it reaches a crane that has B and E in the same range. Made sure to swap B if it's greater than E. That was that. 
+Microsoft provided us with two questions on Codility. The first one was an easy greedy + sorting question where you have to check by using available cranes can an object be moved from `B` to `E`. Sort the `(crane position - length , crane position + length)` then keep on moving B till it reaches a crane that has B and E in the same range. Made sure to swap B if it's greater than E. That was that.
 
 ![coding round](https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif)
 

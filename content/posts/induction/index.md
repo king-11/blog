@@ -1,7 +1,7 @@
 ---
 title: "Initiation of a Faacha"
 date: 2023-06-22T12:46:54+05:30
-tags: [Fresher, IIT BHU, induction]
+tags: [iit, life]
 draft: true
 cover:
     image: "./bhu-gate.jpeg"

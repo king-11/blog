@@ -2,7 +2,7 @@
 title: "Accidental Saga"
 date: 2023-09-25T10:32:23+05:30
 draft: true
-tags: [himachal, trip, accident]
+tags: [himachal, trip]
 ---
 
 ## Foreword

@@ -1,7 +1,7 @@
 ---
 title: "Vitess LFX Mentroship Fall 2021"
 date: 2021-12-21T13:26:46+05:30
-tags: [Open Source, Vitess, Go Language, MySQL, CNCF, LFX]
+tags: [open-source, tech, lfx]
 cover:
     image: "lfx.webp"
     relative: true
@@ -11,7 +11,7 @@ I recently graduated from LFX Mentorship Program. In this blog post, I will be s
 
 ## What is LFX Mentorship
 
-In the exact words of the Linux Foundation, 
+In the exact words of the Linux Foundation,
 
 >The Linux Foundation Mentorship Program is designed to help developers — many of whom are first-time open source contributors — with the necessary skills and resources to learn, experiment, and contribute effectively to open source communities. By participating in a mentorship program, mentees have the opportunity to learn from experienced open source contributors as a segue to get internship and job opportunities upon graduation."
 
@@ -25,7 +25,7 @@ Also, I was particularly fascinated by the extent of usage of Vitess. It was bui
 
 ## Problem Statement of Project
 
-Vitess does not yet have support for collations and character sets. So, to compare varchar strings, Vitess needs to rely on [WEIGHT_STRING](https://dev.mysql.com/doc/refman/5.7/en/string-functions.html#function_weight-string) function for now. MySQL documentation says WEIGHT_STRING is a debugging function meant only for internal use. 
+Vitess does not yet have support for collations and character sets. So, to compare varchar strings, Vitess needs to rely on [WEIGHT_STRING](https://dev.mysql.com/doc/refman/5.7/en/string-functions.html#function_weight-string) function for now. MySQL documentation says WEIGHT_STRING is a debugging function meant only for internal use.
 
 ![my reaction](https://media.giphy.com/media/l0Iy1U0KU3rBaewjm/giphy-downsized.gif)
 
@@ -81,7 +81,7 @@ After that, we diff the ones different from the original UCA weights into separa
 
 ### License Issues
 
-Due to Vitess and Oracle license issues, we can't parse the XML as we were doing using `conf_to_src`. The license only allows us to use in-memory things. So we dump those collations as JSON by attaching to MySQL Unit Testing with a custom unit test and then convert them into `go` code. 
+Due to Vitess and Oracle license issues, we can't parse the XML as we were doing using `conf_to_src`. The license only allows us to use in-memory things. So we dump those collations as JSON by attaching to MySQL Unit Testing with a custom unit test and then convert them into `go` code.
 
 ![license issue](https://media.giphy.com/media/3o6Mb5N2oCnG4dMvIc/giphy.gif)
 

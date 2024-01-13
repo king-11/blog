@@ -8,9 +8,9 @@ slug: /iwbdc/2023-lumos-ideation
 cover:
   image: "https://source.unsplash.com/Q1p7bh3SHj8/1600x900"
 tags:
-  - IWBDC
-  - Web Browser
-  - Lumos
+  - tech
+  - hackathon
+  - iwbdc
 ---
 
 ## Legion of Legends (LoL)
@@ -33,22 +33,21 @@ Please check out my [projects here](https://shivanshs9.me/projects/).
 
 I have completed my B.Tech in CSE from IIT BHU in the year 2021.  In the past, I have worked on various projects including web/app development projects, NLP projects during my college coursework. I interned at Microsoft and am currently working at Microsoft for the last 2 years.
 
-During my internships, I have worked on developing a Windows application for debugging surface devices. We used the WPF framework for making the application. 
+During my internships, I have worked on developing a Windows application for debugging surface devices. We used the WPF framework for making the application.
 
-Currently, I am working in the team that develops and maintains WPF ( Windows Presentation Framework ) - a UI framework for developing Windows applications. 
+Currently, I am working in the team that develops and maintains WPF ( Windows Presentation Framework ) - a UI framework for developing Windows applications.
 
 Apart from this, I have worked on several NLP projects and have a [research paper on the same](https://aclanthology.org/2022.insights-1.24/). Here's some of my past projects:
 
 #### [Contour Rendering](https://github.com/pegasus-lynx/ContourRendering)
-This project allowed me to dive into the world of computer graphics, where we used C++ and OpenGL graphics API library to develop an application that allows you to convert contour maps into 3D models. 
-This allowed me to understand the internals of computer graphics and how rendering engine works. 
+This project allowed me to dive into the world of computer graphics, where we used C++ and OpenGL graphics API library to develop an application that allows you to convert contour maps into 3D models.
+This allowed me to understand the internals of computer graphics and how rendering engine works.
 This project also allowed me to work with low-level performant languages like C++ and helped me understand the complexity involved in considering performance when working with the graphics engine
 
-#### WPF 
-WPF is a well-established UI framework developed by Microsoft and was launched around 2006. 
-This project allowed me to work on a very complex software project with multiple components interacting with different OS components like - imaging, speech components, other UI frameworks for interoperability, Accessibility and automation stack on Windows, printing and other hardware drivers, XPS ( a format similar to PDF ) document parsing and printing stack. 
-WPF has tight integration with the DirectX rendering engine and is written with performance in mind. This allowed me to take a deep dive into how low-level graphic APIs work. 
-WPF being part of .NET, puts attention to localization and accessibility, which helped me understand the complexity of localization ( that's required with multilingual support ) 
+#### WPF
+WPF is a well-established UI framework developed by Microsoft and was launched around 2006.
+This project allowed me to work on a very complex software project with multiple components interacting with different OS components like - imaging, speech components, other UI frameworks for interoperability, Accessibility and automation stack on Windows, printing and other hardware drivers, XPS ( a format similar to PDF ) document parsing and printing stack.
+WPF has tight integration with the DirectX rendering engine and is written with performance in mind. This allowed me to take a deep dive into how low-level graphic APIs work.
+WPF being part of .NET, puts attention to localization and accessibility, which helped me understand the complexity of localization ( that's required with multilingual support )
 WPF is shipped with Windows update and these updates are in place updates, similar to what we will be achieving with automatic upgrade of our browser.
 You can find my WPF contributions on my [work github](https://github.com/dipeshmsft).
-

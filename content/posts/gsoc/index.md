@@ -1,7 +1,7 @@
 ---
 title: "Journey Google Summer of Code"
 date: 2021-07-05T13:18:46+05:30
-tags: [GSOC, Open Source, C, Web Development, Chapel]
+tags: [open-source, gsoc, tech]
 cover:
     image: "journey.webp"
     relative: true
@@ -9,13 +9,13 @@ cover:
 
 # What is GSoC?
 
->Google Summer of Code is a global program focused on bringing more student developers into open source software development. Students work with an open-source organization on a 10-week programming project during their break from school. 
+>Google Summer of Code is a global program focused on bringing more student developers into open source software development. Students work with an open-source organization on a 10-week programming project during their break from school.
 
 This post highlights **my journey** of getting selected into the program from the very beginning. I believe that there is no defined path for getting selected in such open-source fellowships. Everyone has a unique journey, and you can take a few things from other journeys to write yours :) because the essence of each one is similar.
 
 ![Let's get started](https://cdn.hashnode.com/res/hashnode/image/upload/v1625409867224/y_wlVPKZ2.gif)
 
-Now that I have your attention, let's get started. I will talk about my journey in two parts: 
+Now that I have your attention, let's get started. I will talk about my journey in two parts:
 - the initial **Pre-GSoC** part will cover how I came about making my first contribution in Open Source and developed my skills
 - the later part __GSoC InFocus__ focuses on GSoC specific things like selecting an organization, contributing, writing a proposal, etc.
 
@@ -27,7 +27,7 @@ This was a phase where I wasn't much worried about GSoC and focused on developin
 
 ## How I came to know about GSoC?
 
-The first time I heard about GSoC was in an event conducted by [Club of Programmers IITBHU](http://copsiitbhu.co.in/) where I was introduced to open-source programs like GSoC, Outreachy, etc. and people who were previously selected shared their experience with us. 
+The first time I heard about GSoC was in an event conducted by [Club of Programmers IITBHU](http://copsiitbhu.co.in/) where I was introduced to open-source programs like GSoC, Outreachy, etc. and people who were previously selected shared their experience with us.
 
 ![conference](https://media.giphy.com/media/JUXtbHuixcZKeGJEro/giphy.gif)
 
@@ -58,7 +58,7 @@ Apart from contributing, you also get rewarded swags, tees, etc., by DigitalOcea
 
 I outlined my hacktoberfest with my friend [Kushal](https://github.com/K-Kumar-01) ahead of October. We decided to go good-first hunting, work on several issues and earn some swags. Who doesn't like swags, right? So I intended on completing the tasks to get those swags.
 
-All of the projects were very welcoming. Even though I had **no idea** about the tech stack they were using, I contributed to them, but I focused on solving issues and asked many questions. 
+All of the projects were very welcoming. Even though I had **no idea** about the tech stack they were using, I contributed to them, but I focused on solving issues and asked many questions.
 
 ![helping out](https://media.giphy.com/media/5wFjITVDtKD0wwJe7V/giphy.gif)
 
@@ -95,7 +95,7 @@ The list, as you can see, consisted of around 30-40 organizations. So I started 
 
 In the end, I decided to go with [HTTP-APIs](https://github.com/HTTP-APIs). I started checking out their Contributing Guidelines, Resources to get started, and their repositories. I selected HTTP-APIs because REST APIs are my forte, and they were doing something pretty interesting.
 
-I made a few contributions to their repos, upgraded their dependencies to support python v3.8 and updated Dockerfile. 
+I made a few contributions to their repos, upgraded their dependencies to support python v3.8 and updated Dockerfile.
 
 Still, a few things that took me away from them were that the mentors weren't that responsive, and even though I went through all of their resources, I couldn't find something significant to contribute.
 
@@ -105,7 +105,7 @@ So I drifted away from HTTP-APIs, but at the back of my mind, it was still that 
 
 If you know me prior, you already know that I never went through with HTTP-APIs instead, it was [Chapel](https://chapel-lang.org/). Chapel is a programming language designed for productive parallel computing at scale.
 
-The story behind the finding of Chapel is something that you don't hear often. I was in a meeting with my peers, and we started talking about things we are doing, and GSoC became a part of the discussion. 
+The story behind the finding of Chapel is something that you don't hear often. I was in a meeting with my peers, and we started talking about things we are doing, and GSoC became a part of the discussion.
 
 My friend [@Jatin](https://codeforces.com/profile/rivalq) stated to me that, and I quote, "there is this language where you can run statements simultaneously using a `forall` loop". He seemed pretty interested, and so sparked the idea of taking a look at Chapel.
 
@@ -155,7 +155,7 @@ I got up to speed on working with sockets in `C`, went through the design of the
 
 I made sure to add in code snippets and mock implementation of how the code will be implemented in `C` and `Chapel`. It is also a good idea to add in diagrams which I did, because images speak more than text.
 
-My organization mentors seemed happy with the design because they didn't seem to have much issue with what I had shown them in the draft. 
+My organization mentors seemed happy with the design because they didn't seem to have much issue with what I had shown them in the draft.
 
 But [@Shivansh](https://shivanshs9.me/), one of my seniors I requested to review my proposal, told me that it was less technical and needed more of it. This pushed me to improve my proposal further, add more details about the implementation, add in diagrams and code snippets.
 

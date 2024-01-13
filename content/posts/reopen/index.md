@@ -1,7 +1,7 @@
 ---
 title: "Reopen IIT BHU"
 date: 2021-09-07T13:30:51+05:30
-tags: ["campus4ug", "IITBHUAssemble", "reopenIITs"]
+tags: [life, iit]
 cover:
     image: "eee.jpg"
     relative: true

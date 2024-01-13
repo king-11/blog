@@ -1,7 +1,7 @@
 ---
 title: "Finding IIT"
 date: 2023-06-22T12:46:54+05:30
-tags: [JEE, FIITJEE, JOSAA, IChO]
+tags: [life, jee]
 cover:
     image: "jee.jpg"
     relative: true

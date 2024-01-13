@@ -6,7 +6,6 @@ cover:
     image: cover.webp
     relative: true
 tags:
-  - tech
   - open-source
   - life
 ---
