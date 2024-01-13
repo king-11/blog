@@ -23,36 +23,36 @@ sitemap:
   priority: 0.5
 
 languages:
-    en:
-      languageName: "English"
-      weight: 1
-      taxonomies:
-        category: categories
-        tag: tags
-        series: series
-      menu:
-          main:
-              - name: Archive
-                url: archives
-                weight: 5
-              - name: Search
-                url: search/
-                weight: 10
-              - name: Tags
-                url: tags/
-                weight: 10
+  en:
+    languageName: "English"
+    weight: 1
+    taxonomies:
+      category: categories
+      tag: tags
+      series: series
+    menu:
+        main:
+            - name: Archive
+              url: archives
+              weight: 5
+            - name: Search
+              url: search/
+              weight: 10
+            - name: Tags
+              url: tags/
+              weight: 10
 
 outputs:
-    home:
-        - HTML
-        - RSS
-        - JSON
+  home:
+    - HTML
+    - RSS
+    - JSON
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Backpacking Dream
-  description: "A blog site owned by Lakshya Singh previously a student at Indian Institute of Technology (BHU) Varanasi backpacking through different phases of life. Being a fresher, COVID lockdown, final year going through many ups and downs, making friends along the way and finding my passion for programming and photography."
-  keywords: [Blog, IIT, College, COVID, Indian Institute of Technology, Programming, Open Source]
+  description: "A blog site owned by Lakshya Singh, Microsoft, IIT (BHU) Varanasi a geeky, nerdy, technophile cum Software Engineer. Backpacking through different phases of life, making friends along the way and sharing his experiences with them."
+  keywords: [Blog, IIT, College, COVID, Technology, Programming, Open Source, Microsoft, Bitcoin, Software Engineer, Life, Programming]
   author: Lakshya Singh
   images: ["programmer.jpeg"]
   DateFormat: "January 2, 2006"
@@ -78,7 +78,7 @@ params:
     Content: >
         Welcome to my blog, where I write about my journey backpacking through terrains of the physical and digital realms.
 
-        - I am writing a series of blogs about my journey in college, after which I will again switch back to the technical stuff.
+        - I write about technical things like programming languages, bitcoin, open source software, etc but that's not all I also write about non-technical things like my life, my thoughts, my experiences, etc.
 
         - I usually try to be brief, but sometimes it can turn in TL;DR!
 
