@@ -1,5 +1,13 @@
 # Backpacking Dream
 
+Clone the repo:
+```
+git clone https://github.com/king-11/blog
+git submodule update --init --recursive
+```
+
+The repository uses Hugo Theme [PaperMod](https://github.com/adityatelange/hugo-PaperMod) as template for this blog.
+
 ## Development
 
 ```bash
