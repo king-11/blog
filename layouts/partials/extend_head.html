@@ -1,2 +1,13 @@
 <script defer data-domain="king-11.github.io/blog"
   src="https://web-app.centralindia.cloudapp.azure.com/js/script.js"></script>
+
+{{ if .Page.Store.Get "needMermaid" -}}
+<script type="module">
+  let theme = localStorage.getItem("pref-theme") === "dark" ? 'dark' : 'base';
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({
+    startOnLoad: true,
+    'theme': theme,
+  });
+</script>
+{{ end -}}
