@@ -66,6 +66,7 @@ params:
   ShowCodeCopyButtons: false
   ShowWordCount: true
   ShowRssButtonInSectionTermList: true
+  ShowFullTextinRSS: true
   disableScrollToTop: false
   comments: false
   hidemeta: false
@@ -92,6 +93,8 @@ params:
       url: "https://linkedin.com/in/lakshyasingh11"
     - name: instagram
       url: "https://instagram.com/cryptic_sniper"
+    - name: rss
+      url: "https://king-11.github.io/blog/index.xml"
 
 
   cover:
