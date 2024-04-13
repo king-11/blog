@@ -7,6 +7,7 @@ tags:
   - tech
 cover:
   image: good-git-commits.webp
+canonicalUrl: https://king-11.hashnode.dev/good-commits
 ---
 
 ## Good Commits
@@ -19,7 +20,7 @@ Git commits are everywhere, and you might be generating more than 1k commits ove
 
 - Writing better commits can make the difference between your debugging session lasting **1 hour to a few minutes**.
 
-- With good commits, it's easier for anyone to understand the progress of a project and get up to speed. 
+- With good commits, it's easier for anyone to understand the progress of a project and get up to speed.
 
 - It also allows reviewers to understand your progress during the resolution of an issue clearly.
 
@@ -65,7 +66,7 @@ A commit message except for the subject line limited to `50` chars should includ
 - why this fix is needed?
 - why take the current approach for this change?
 
-Commit message should be in the future tense, i.e. 'Fix' vs 'Fixed.' 
+Commit message should be in the future tense, i.e. 'Fix' vs 'Fixed.'
 
 ## Bonus Treats
 

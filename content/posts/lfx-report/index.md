@@ -5,6 +5,7 @@ tags: [open-source, tech, lfx]
 cover:
     image: "lfx.webp"
     relative: true
+canonicalUrl: https://king-11.hashnode.dev/lfx-mentorship-fall-2021
 ---
 
 I recently graduated from LFX Mentorship Program. In this blog post, I will be sharing my experience of contributing to [Vitess](https://vitess.io/), a database clustering system for horizontal scaling of MySQL.

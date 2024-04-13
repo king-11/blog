@@ -7,6 +7,7 @@ tags:
   - tech
 cover:
   image: regular-expressions.webp
+canonicalUrl: https://king-11.hashnode.dev/understanding-not-so-regular-expressions
 ---
 
 ## What is Regex?
@@ -85,16 +86,16 @@ You can also provide range values to regex for defining character classes using 
 But if you want to match `-`, you have to escape it or keep it at the start or end of character class, i.e. `[]`.
 
 ```js
-/[0\-5]/.test('-') 
+/[0\-5]/.test('-')
 // returns true matches 0, 5, -
-/[-0-5]/.test('-') 
+/[-0-5]/.test('-')
 // returns true matches digits from 0 to 5 and -
 ```
 
 We can define complement character class, i.e. characters we don't want to match, by adding `^` at the start of our class.
 
 ```js
-/[^a-z]/.test('A') 
+/[^a-z]/.test('A')
 // returns true doesn't match any lowercase alphabet
 ```
 
@@ -120,7 +121,7 @@ You can define character classes for things like alphabets and digits but regex 
 
 ### Wild 🐯 Cards
 
-- `^` symbol allows us to match the starting of the string 
+- `^` symbol allows us to match the starting of the string
 - `$` allows you to match the end of the string
 - `.` allows us to match any character
 
@@ -132,7 +133,7 @@ console.log("Tight".match(/^t/ig))
 ```
 
 | ![example regex for end of line](https://cdn.hashnode.com/res/hashnode/image/upload/v1621157593734/CW3JoG7Z2.png) |                  ![example regex for start of line](https://cdn.hashnode.com/res/hashnode/image/upload/v1621157545875/_pjsWxTbs.png) | ![example regex comparison](https://cdn.hashnode.com/res/hashnode/image/upload/v1621157607532/YWaWbkMSn.png) |
-|:---:|:---:|:---:| 
+|:---:|:---:|:---:|
 |  |  |  |  |
 
 In the above example, while `l` was matched only with the last one, whereas `T` was matched with the first one due to `$` and `^`, respectively. Without `$` as you can see, all the `l`s were matched.
@@ -293,7 +294,7 @@ for (let x of "apple mapple".matchAll(regex)) {
 // expected ['apple','maple'] found ['apple' 'maple']
 ```
 
-I highly recommend you to check language-specific docs for syntax and available features. One of the best docs for regex is for [python](https://docs.python.org/3/howto/regex.html). 
+I highly recommend you to check language-specific docs for syntax and available features. One of the best docs for regex is for [python](https://docs.python.org/3/howto/regex.html).
 
 I didn't cover one feature that I might make a new article on it is [Lookahead and Lookbehind](https://javascript.info/regexp-lookahead-lookbehind). You can wait :) or check out the link.
 
@@ -302,4 +303,3 @@ I didn't cover one feature that I might make a new article on it is [Lookahead a
 Why did I say that? Because sometimes regex can take exponential time to search a be really [catastrophic](https://javascript.info/regexp-catastrophic-backtracking). So .....
 
 >May the code be with you 🖖
-

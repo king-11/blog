@@ -3,8 +3,9 @@ title: "Google Summer of Code 2021 Report"
 date: 2021-08-26T13:24:41+05:30
 tags: [open-source, tech, gsoc]
 cover:
-    image: "report.webp"
-    relative: true
+  image: "report.webp"
+  relative: true
+canonicalUrl: https://king-11.hashnode.dev/gsoc-2021-final-report
 ---
 
 ## Abstract

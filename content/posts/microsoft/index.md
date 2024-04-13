@@ -5,6 +5,7 @@ tags: [microsoft, life, tech]
 cover:
     image: "interview.webp"
     relative: true
+canonicalUrl: https://king-11.hashnode.dev/interviewing-experience-microsoft
 ---
 
 Microsoft is like a dream company for many people me included :P.

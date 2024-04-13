@@ -5,6 +5,7 @@ tags: [open-source, gsoc, tech]
 cover:
     image: "journey.webp"
     relative: true
+canonicalUrl: https://king-11.hashnode.dev/guide-google-summer-of-code
 ---
 
 # What is GSoC?
