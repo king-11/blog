@@ -3,7 +3,7 @@
 
 {{ if .Page.Store.Get "needMermaid" -}}
 <script type="module">
-  let theme = localStorage.getItem("pref-theme") === "dark" ? 'dark' : 'base';
+  let theme = localStorage.getItem("pref-theme") === "dark" ? 'dark' : 'default';
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
   mermaid.initialize({
     startOnLoad: true,
