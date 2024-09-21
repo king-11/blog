@@ -85,12 +85,14 @@ params:
 
 
   socialIcons:
-    - name: twitter
-      url: "https://twitter.com/1108King"
+    - name: gitlab
+      url: "https://gitlab.com/king-11"
     - name: github
       url: "https://github.com/king-11"
     - name: linkedin
       url: "https://linkedin.com/in/lakshyasingh11"
+    - name: twitter
+      url: "https://twitter.com/1108King"
     - name: instagram
       url: "https://instagram.com/cryptic_sniper"
     - name: rss
