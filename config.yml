@@ -1,4 +1,4 @@
-baseURL: http://king-11.github.io/blog
+baseURL: https://blog.king-11.dev
 languageCode: en-us
 title: Backpacking Dream
 theme: PaperMod
@@ -14,8 +14,6 @@ pygmentsUseClasses: true
 minify:
   disableXML: true
   minifyOutput: true
-
-enableRobotsTXT: true
 
 sitemap:
   changefreq: weekly
@@ -96,7 +94,7 @@ params:
     - name: instagram
       url: "https://instagram.com/cryptic_sniper"
     - name: rss
-      url: "https://king-11.github.io/blog/index.xml"
+      url: "https://blog.king-11.dev/index.xml"
 
 
   cover:
@@ -126,7 +124,7 @@ menu:
       weight: 20
     - identifier: Portfolio
       name: king-11
-      url: https://king-11.vercel.app
+      url: https://king-11.dev
       weight: 30
   # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 markup:
