@@ -26,7 +26,7 @@ Rate Limiting implementation can use different algorithms based on the requireme
 ### Token Bucket
 In token bucket algorithm we have a fixed size bucket which keeps getting filled by tokens at a uniform rate. When a new request arrives it is only processed if we have at-least one token in the bucket, otherwise the request is dropped.
 
-{{< mermaid >}}
+```mermaid
 flowchart LR
 	r(Request)
 	t[[tap]]
@@ -40,11 +40,11 @@ flowchart LR
 	b <--> c
 	c -->|true| p
 	c -->|false| d
-{{< /mermaid >}}
+```
 
 ### Leaky Bucket
 In leaky bucket algorithm there is a fixed size queue where new requests are queued. These requests are then consumed at a uniform rate. A new request is dropped if bucket is a it's capacity.
-{{< mermaid >}}
+```mermaid
 flowchart LR
 	r(Request)
 	b[(Queue)]
@@ -56,13 +56,13 @@ flowchart LR
 	c -->|true| b
 	c -->|false| d
 	b --> p
-{{< /mermaid >}}
+```
 
 Leaky and Token bucket algorithm are relatively simple to implement but on the downside it's difficult to find the right value for bucket size and token generation/request consumption rate.
 
 ### Fixed Window Counter
 In fixed window counter we keep track of number of requests within a fixed time range e.g. a minute or 30 seconds etc. We only process a limited number of requests within the time window beyond which the requests are dropped (red ones).
-{{< mermaid >}}
+```mermaid
 gantt
 	title Requests v/s Time
 	dateFormat m:ss
@@ -73,10 +73,10 @@ gantt
 	R3 :0:25,10s
 	R4 :crit,0:40,10s
 	R5 :crit,0:45,10s
-{{< /mermaid >}}
+```
 
 The issue with fixed window counter comes around when there are requests coming near the boundary of two windows. In such a scenario we actually end up processing more request within time window than set parameter.
-{{< mermaid >}}
+```mermaid
 gantt
 	title Requests v/s Time
 	dateFormat m:ss
@@ -89,7 +89,7 @@ gantt
 	R6 :1:00,10s
 	R7 :1:00,10s
 	R8 :1:20,10s
-{{< /mermaid >}}
+```
 
 In the above example within time range of 00:30 - 01:30 instead of 3 the rate limiter allowed 6 requests which is double of what was expected of it to allow in a minute. O(2\*n)
 
@@ -125,7 +125,7 @@ Liked sliding window log we need to use memory for keeping track of history. To 
 ```
 
 To reduce our memory footprint, we can store counters in a Redis hash which are highly efficient in their [storage usage](https://redis.io/topics/memory-optimization). Each new request which increments the counter it can set the expiry for it based on our time window but still there is a possibility of DoS attack to remedy this we should clean up hashes at regular intervals if they are rapidly increasing.
-{{< mermaid >}}
+```mermaid
 flowchart LR
 	r[request]
 	i(increment counter)
@@ -139,7 +139,7 @@ flowchart LR
 	c <--> re
 	c --> p
 	c --> d
-{{< /mermaid >}}
+```
 
 ## HTTP Response
 Now that we have rate limited user its also important to convey it back to the end user.

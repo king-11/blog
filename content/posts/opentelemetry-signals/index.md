@@ -30,7 +30,7 @@ We can group different signals together to get idea about the health of our syst
 A distributed trace or just trace is a representation of a **series** of causally related **events** that encode the end-to-end **request flow** through a distributed system. A distributed trace contains events that cross process, network and security boundaries.
 
 In particular, a **Trace** can be thought of as a Directed Acyclic Graph (DAG) of **Spans**.
-{{< mermaid >}}
+```mermaid
 gantt
 	title Trace
 	dateFormat mm:ss
@@ -41,17 +41,17 @@ gantt
 	Span D :t4, 00:30, 10s
 	Span E :t5, 00:40, 15s
 	Span F :t6, 00:45, 5s
-{{< /mermaid >}}
+```
 
 ### Span
 **Spans** represent a single logical operation within a trace. For example, a function call during a user request can be represented by a span.
 
-{{< mermaid >}}
+```mermaid
 flowchart TD
 	A(span A) --> B(Span B) & D(Span D) & E(Span E)
 	B --> C(span C)
 	E --> F(span F)
-{{< /mermaid >}}
+```
 
 A span object primarily consists of information about time duration, structured logs/events, attributes, parent span (optional), trace id, etc. We can also create casual relationships between spans across different trace using **Links**.
 
@@ -124,12 +124,12 @@ A metric instrument is created with a name, unit, kind and description. Otel sup
 - **Gauge** (Value at Time)
 - **Histogram** (Statistical Measurement)
 
-{{< mermaid >}}
+```mermaid
 flowchart TD
 	mp(MeterProvider) --> ma(Meter A) & mb(Meter B)
 	ma --> mia(Counter) & mib(Gauge)
 	mb --> mic(UpDownCounter) & mid(Histogram)
-{{< /mermaid >}}
+```
 
 ## Logs
 A log is an **immutable**, timestamped record of discrete events that happened over time. It can be in structured or unstructured (plain text) format.
@@ -145,12 +145,12 @@ error!("I am not working right now!");
 
 With tracing and metrics otel defined a new standard but for logs given the large landscape of legacy systems it acts as **bridge**. The raw logs are attached to the executing trace and span with added information about time, severity, resource, etc finally emitting a **LogRecord**.
 
-{{< mermaid >}}
+```mermaid
 flowchart TD
 	logger(Log4j) --> bridge(Logs Bridge)
 	bridge --> api(Logs Bridge API)
 	api --> sdk(Logs SDK)
-{{< /mermaid >}}
+```
 
 ## Baggage
 Baggage is a **key value** store used to add additional contextual information about the operation and service for access to **downstream** paths.
@@ -183,7 +183,7 @@ fn handle_init_request(
 ```
 
 # Conclusion
-To develop a highly **scalable** and **distributed** system its not just good enought to write good code and tests but also important to ensure monitoring and observability. The system however good is **fallible** due to its interaction with other components, hardware, user, etc. 
+To develop a highly **scalable** and **distributed** system its not just good enought to write good code and tests but also important to ensure monitoring and observability. The system however good is **fallible** due to its interaction with other components, hardware, user, etc.
 
 At any point of time your system should be able to answer...
 

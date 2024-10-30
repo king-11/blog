@@ -42,14 +42,14 @@ make build-experimental
 I didn't want to setup a virtual machine as they are very slow. Also I didn't want to shift to ubuntu whose operations were working fine. So I created a **ubuntu container** and tried running vls tests inside it. I encountered some errors related to lowdown which ken helped me resolve.
 
 Again I couldn't do this because containers don't support **systemd**.
-{{< mermaid >}}
+```mermaid
 flowchart LR
 	s[systemd]
 	sn[snapd]
 	btc[bitcoind]
 	s --> sn
 	sn --> btc
-{{< /mermaid >}}
+```
 
 I think I tried **WSL** but systemd isn't directly supported there as well. I was only able to make VLS work on WSL later around August and documented my journey with WSL in a [github issue](https://github.com/king-11/dotrc/issues/3)
 
@@ -113,7 +113,7 @@ We started with our decided plans of first doing the operations (keysend, pay, e
 
 Below is the flow when any operations happen on a lightning node with VLS.
 
-{{<mermaid>}}
+```mermaid
 sequenceDiagram
 	participant SignerA
 	participant NodeA
@@ -138,7 +138,7 @@ sequenceDiagram
 	SignerA-->>-NodeA: ack
 
 	deactivate NodeA
-{{</mermaid>}}
+```
 
 For running the operations using **socket server** I had setup a testnet node on my laptop which was connected to ken's node. I had to manually go through the **logs** and ask ken to provide me the same using which I created **diagrams** with time for each operation.
 

@@ -18,7 +18,7 @@ It can do so without needing to have any prior information about the executing p
 **Round Robin** is the algorithm that is able to provide better **response time** ~~usually~~, which is a very good choice if you have several interactive processes running that each needs a piece of CPU time on a regular basis. It's able to do so based on a good selection of **time slice length** providing all applications an equal share of CPU on a regular interval leading to good **interactivity**.
 
 **Shortest Job First**/Shorted Remaining Time First (preemptive version) is able to complete the jobs at a very rapid pace due to **greedy selection** of which task to process given the *information* about how long the task will run for. Hence, resulting in superior average **turn around time**.
-{{< mermaid >}}
+```mermaid
 ---
 displayMode: compact
 ---
@@ -35,10 +35,10 @@ gantt
 	section Process 3
 	P3 : 04, 2s
 	P3 : 09, 1s
-{{< /mermaid >}}
+```
 
 
-{{< mermaid >}}
+```mermaid
 gantt
 	title Shortest Job First Scheduling
 	dateFormat ss
@@ -46,7 +46,7 @@ gantt
 	P2 :a1, 00, 3s
 	P3 :a2, after a1, 3s
 	P1 :a3, after a2, 4s
-{{< /mermaid >}}
+```
 
 The average response time is
 - Round Robin: `(0 + 2 + 4)/3 = 2s`
@@ -62,12 +62,12 @@ So let's start with understanding how does MLFQ combines these two algorithms.
 
 ## Multi Level Queues
 As the name suggests instead of a single process queue we use multiple distinct queues with different priority levels. **Q3** is given the highest priority and **Q1** the least.
-{{< mermaid >}}
+```mermaid
 graph LR
 	q3[Q3] --> A((A)) --> B((B))
 	q2[Q2] --> C((C))
 	q1[Q1] --> D((D))
-{{< /mermaid >}}
+```
 
 The rule for any CPU to select a process to run is as follows:
 - Priority(A) > Priority(B): A runs B doesn't, atleast until A's completion.
@@ -85,7 +85,7 @@ Now to decrease priority over time we use the below rules:
 - If the process **consumes** its complete time slice we **reduce** its priority.
 - If the process **gives up** its time slice before its up, it stays at the **same** priority.
 
-{{< mermaid >}}
+```mermaid
 ---
 displayMode: compact
 ---
@@ -93,22 +93,22 @@ gantt
 	title Priority Decrease (2s)
 	dateFormat ss.SSS
 	axisFormat %S
-	
+
 	section Queue 1
 	P1 :a1, 00.000, 2s
 	P2 :02.100, 1.4s
 	P2 :05.500, 1s
-	
+
 	section Queue 2
 	P1 :03.500, 2s
 	P1 :06.500, 2.5s
-{{< /mermaid >}}
+```
 
 Now there are two issues with our current system let's try to remedy them
 
 ### Starvation
 In presence of a lot of I/O bound or short processes a long running **CPU bound job** sitting in the lowest priority queue will suffer starvation. Also it might be the case that a process **started** as CPU bound but now **became** I/O bound.
-{{< mermaid >}}
+```mermaid
 gantt
 	dateFormat ss
 	axisFormat %S
@@ -120,12 +120,12 @@ gantt
 	P4 :a4, after a3, 3s
 	P5 :a5, after a4, 2s
 	section Queue 2
-	P1 :crit, after a5, 4s 
-{{< /mermaid >}}
+	P1 :crit, after a5, 4s
+```
 
 In both the above scenario we can use a new rule for priority boosting.
 - After some time period **S**, all the jobs are moved to highest priority queue.
-{{< mermaid >}}
+```mermaid
 gantt
 	dateFormat ss
 	axisFormat %S
@@ -139,8 +139,8 @@ gantt
 	P1 :crit, a5, after a4, 3s
 	P5 :a6, after a5, 2s
 	section Queue 2
-	P1 :crit, after a6, 1s 
-{{< /mermaid >}}
+	P1 :crit, after a6, 1s
+```
 
 >**S** here is what we call a **voo-doo** constant that needs to be configured properly by a senior level engineer based on his understanding about the requirements of a system.
 
@@ -148,7 +148,7 @@ gantt
 Now an expert programmer who has read through the draft of our open source MLFQ standard can try to game our scheduler for his application to consume all the CPU time.
 
 By manually inserting **unnecessary I/O calls** into the process just before end of time slice and then restarting after a short span, it can make the scheduler think that since process is giving up its time slice it can stay in highest priority queue.
-{{< mermaid >}}
+```mermaid
 ---
 displayMode: compact
 ---
@@ -162,11 +162,11 @@ gantt
 	section Queue 2
 	P2 :00.000, 2s
 	P2 :08.000, 1.9s
-{{< /mermaid >}}
+```
 
 To remedy this our algorithm can use better accounting here, in form of a new rule:
 - Once a job a uses up its **time allotment** in a particular queue we reduce its priority **irrespective** of how many times it gave up CPU time.
-{{< mermaid >}}
+```mermaid
 gantt
 	dateFormat ss.SSS
 	axisFormat %S
@@ -178,7 +178,7 @@ gantt
 	P2 :00.000, 2s
 	P2 :04.100, 1.9s
 	P1 :active, 06.000, 1.9s
-{{< /mermaid >}}
+```
 
 ## Tuning MLFQ
 Generally, we keep **short time slice** for high priority queue consisting of interactive processes and it keeps on **increasing** as the priority decreases and we reach CPU bound processes in low priority queues.

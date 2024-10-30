@@ -58,13 +58,13 @@ Git works in three areas:
 - Repository
 
 When we `stash` changes we are cleaning up the `working area`. Moving to a different `branch` switches the `repository` to a different `working area`.
-{{< mermaid >}}
+```mermaid
 graph LR
 	W[(Working Area)] -->|add| S[(Staging Area)]
 	S -->|commit| R[(Repository)]
 
 	R --> |checkout branch|W
-{{< /mermaid >}}
+```
 
 You might think that **cloning** your repository into *multiple folder* is a solution but its a bad one as:
 - The data will **duplicated** for the git repository.
@@ -72,16 +72,16 @@ You might think that **cloning** your repository into *multiple folder* is a sol
 - You will have to perform operations like `fetch` and `pull` on both the clones separately.
 
 There exists only one working area at any point but if we had *multiple working areas* we wouldn't need to clear up one to use other. Indeed, a git repository can support multiple working trees, allowing you to check out more than one branch at a time using `git worktree`.
-{{< mermaid >}}
+```mermaid
 graph TD
 	P[(feature python)] -->|add| PS[(Staging Area 1)]
 	D[(feature dotnet)] -->|add| DS[(Staging Area 2)]
-	S[(feature scala)] -->|add| SS[(Staging Area 3)] 
+	S[(feature scala)] -->|add| SS[(Staging Area 3)]
 
 	PS -->|commit| R[(Repository)]
 	DS -->|commit| R
 	SS -->|commit| R
-{{< /mermaid >}}
+```
 
 ## Git WorkTree
 So using `git worktree` we can work on multiple branches at the same time. We can even think of it as "multi checkout \<branch1\> \<branch2\>"

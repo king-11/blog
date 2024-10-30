@@ -48,10 +48,10 @@ I could have bought the domain from `cloudflare` too they are the most transpare
 ### Nameserver
 **Nameserver** is the server which contain `DNS` records for your domain. Think of it like a phonebook which contains your addresses, there can be many phonebooks but only one some will contain your details.
 
-{{< mermaid >}}
+```mermaid
 graph LR
   B[Browser] -->|domain| N[Nameserver] --> |ip address| B
-{{< /mermaid >}}
+```
 
 To manage my custom domain on cloudflare I had to update my nameservers on namecheap and point them to the ones that cloudflare provided me.
 
@@ -67,23 +67,23 @@ Now the domain is in hands of `cloudflare` it can now easily create new DNS reco
 ## Security Settings
 We can do additional setup to ensure that the content is transferred securely between all involved entities. To do this will enable full SSL (Secure Socket Layer)/TLS (Transport Layer Security). Under websites -> king-11.dev -> SSL/TLS, we would set my encryption mode to `Full`.
 
-{{< mermaid >}}
+```mermaid
 graph LR
 	B(Browser) -->|🔒| C(Cloudflare)
 	C -->|🔒| O(Origin Server)
-{{< /mermaid >}}
+```
 
 Furthermore, I can upgrade all the `HTTP` connection to `HTTPS` which returns content to user over a secure transport channel.
 1. Under the SSL/TLS section, there is option of *Edge Certificates*
 2. Under Edge Certificates, we can enable "*Always Use HTTPS"*
 
-{{< mermaid >}}
+```mermaid
 graph TD
 	B(Browser) -->|1. HTTP Connection| C(Cloudflare)
 	C -->|2. 307 Internal Redirect| B
 	B -->|3. Connection Redirect| B
 	B -->|4. HTTPS Connection| C
-{{< /mermaid >}}
+```
 
 ## Github Pages
 I have been using github pages to deploy my static sites which included my [blog](github.com/king-11/blog) repository. It uses a **[github action](https://github.com/king-11/blog/blob/main/.github/workflows/hugo.yaml#L36)** to build and then publish my **[hugo](https://gohugo.io/)** based site onto github pages.
@@ -99,11 +99,11 @@ Given github is the only one aware about the IP Address of my server, cloudflare
 
 This is exactly what CNAME records provide a DNS level redirection, they map one domain to another domain where both can be handled by different nameservers.
 
-{{< mermaid >}}
+```mermaid
 graph LR
 	B[(Browser)] -->|blog.king-11.dev| C[(Cloudflare)]
 	C -->|blog.king-11.dev| G[(Github)]
-{{< /mermaid >}}
+```
 
 So in the above case when users asks cloudflare for blog site it redirects user to github which given the custom domain configuration settings know which server this domain points to and can provide user the result i.e. an A Name Record (domain -> IP).
 
@@ -151,13 +151,13 @@ So this all started from cloudflare tunnels. I have added details in my post [Th
 
 To access it [umbrel](https://umbrel.com/) provides **tor** based access which is very slow so I needed a faster solution. There was [Tailscale VPN](https://tailscale.com/) which wasn't working so the other option was [cloudflare tunnel](https://www.cloudflare.com/en-in/products/tunnel/).
 
-{{< mermaid >}}
+```mermaid
 graph LR
 	B((Browser)) -->|jellyfin.king-11.dev| C[(Cloudflare)]
 	O[(Origin Server)] --- D[cloudflared]
 	D --> C
 	M((👨‍💻)) --x D
-{{< /mermaid >}}
+```
 
 So while there is a connection between `cloudflare` and `cloudflared` (d is for daemon process) on my raspberry pi, no other user can access it. I can then use `cloudflare` to serve it on a custom domain which I purchased.
 

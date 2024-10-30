@@ -61,13 +61,13 @@ pstree 0
 
 The most interesting for me was seeing what we have always been taught, the hierarchy from kernel to shell to my browser of choice.
 
-{{< mermaid >}}
+```mermaid
 graph LR
 	K[kernel] --> I
 	I[init] --> S[systemd]
 	S --> GS[gnome-shell]
 	GS --> B[brave]
-{{< /mermaid >}}
+```
 
 ## Waiting for Process
 The parent process being a good parent might wanna wait for the child to exit before completing itself.
@@ -119,7 +119,7 @@ printf("this won't print");
 ### Variants
 There are multiple variants in `exec` family.
 
-{{< mermaid >}}
+```mermaid
 graph TD
 	E[exec] --> cl[execl]
 	E --> cv[execv]
@@ -128,7 +128,7 @@ graph TD
 	cv --> cve[execve]
 	cv --> cvp[execvp]
 	cv --> cvpe[execvpe]
-{{< /mermaid >}}
+```
 
 The `cl` class of functions take in multiple arguments which can be thought of as `arg0`, `arg1`, `arg2`, etc. The `v` class of functions take an array of `NULL` terminated strings as argument ending with `NULL`.
 

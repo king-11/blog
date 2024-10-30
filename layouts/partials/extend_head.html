@@ -1,16 +1,17 @@
 <script defer data-domain="blog.king-11.dev"
   src="https://web-app.centralindia.cloudapp.azure.com/js/script.js"></script>
 
-{{ if .Page.Store.Get "needMermaid" -}}
+{{ $noop := .WordCount }}
+{{ if .Page.Store.Get "hasMermaid" }}
 <script type="module">
-  let theme = localStorage.getItem("pref-theme") === "dark" ? 'neutral' : 'base';
-  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  var theme = localStorage.getItem("pref-theme") === "dark" ? 'neutral' : 'base';
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.3.0/dist/mermaid.esm.min.mjs';
   mermaid.initialize({
     startOnLoad: true,
     'theme': theme,
   });
 </script>
-{{ end -}}
+{{ end }}
 
 {{ if .Params.canonicalUrl }}
 <link rel="canonical" href="{{ .Params.canonicalUrl }}">
