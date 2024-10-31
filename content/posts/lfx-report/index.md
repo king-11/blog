@@ -1,5 +1,5 @@
 ---
-title: "Vitess LFX Mentroship Fall 2021"
+title: "Vitess LFX Mentorship Fall 2021"
 date: 2021-12-21T13:26:46+05:30
 tags: [open-source, tech, lfx]
 cover:

@@ -221,7 +221,7 @@ job.join() // wait for it to complete
 Coroutine Cancellation is of **cooperative nature**, the cancelled coroutine has to agree with cancellation and stop the computation. If a coroutine isn't actively checking for cancellation signal then it can't be cancelled.
 
 All the suspending functions in `kotlinx.coroutines` are cancellable, they actively check for cancellation signal and then throw a `CancellationException` when cancelled. So we shouldn't catch `CancellationException` without intent of stopping the computation.
-```
+```kotlin
 try {
 	delay(500)
 } catch (e: Exception) {
