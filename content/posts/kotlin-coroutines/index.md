@@ -5,7 +5,7 @@ date: 2024-01-14T01:17:21+05:30
 tags:
   - tech
   - kotlin
-  - language
+  - programming-language
 cover:
     relative: true
     image: cover.webp

@@ -4,7 +4,7 @@ date: 2024-06-14
 tags:
   - python
   - tech
-  - language
+  - programming-language
 description: Python wheel file is a portable way to share python packages. The file from top looks very opaque but its possible to modify it based on requirements using a little bit of reverse engineering.
 cover:
   relative: true

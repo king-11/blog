@@ -3,8 +3,7 @@ title: Union/Sum Type
 description: Union/Sum Types are very useful when we want to represent different classes that represent variation of a single type like different kinds of operating systems, mobile phones, etc.
 date: 2024-01-20
 tags:
-  - language
-  - types
+  - programming-language
   - tech
 cover:
   image: cover.webp

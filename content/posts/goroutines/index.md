@@ -4,7 +4,7 @@ date: 2023-12-24
 description: Goroutines or lightweight threads are a powerful concurrency feature of go that allows us to perform concurrent operations with elegant design patterns revolving around channels and mutexes
 tags:
   - tech
-  - language
+  - programming-language
   - golang
 cover:
   relative: true
