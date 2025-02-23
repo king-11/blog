@@ -1,7 +1,7 @@
 baseURL: https://blog.king-11.dev
 languageCode: en-us
 title: Backpacking Dream
-theme: PaperMod
+theme: ["hugo-admonitions", "PaperMod"]
 
 enableInlineShortcodes: true
 enableRobotsTXT: true
@@ -29,16 +29,16 @@ languages:
       tag: tags
       series: series
     menu:
-        main:
-            - name: Archive
-              url: archives
-              weight: 5
-            - name: Search
-              url: search/
-              weight: 10
-            - name: Tags
-              url: tags/
-              weight: 10
+      main:
+        - name: Archive
+          url: archives
+          weight: 5
+        - name: Search
+          url: search/
+          weight: 10
+        - name: Tags
+          url: tags/
+          weight: 10
 
 outputs:
   home:
@@ -50,7 +50,21 @@ params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Backpacking Dream
   description: "A blog site owned by Lakshya Singh, Microsoft, IIT (BHU) Varanasi a geeky, nerdy, technophile cum Software Engineer. Backpacking through different phases of life, making friends along the way and sharing his experiences with them."
-  keywords: [Blog, IIT, College, COVID, Technology, Programming, Open Source, Microsoft, Bitcoin, Software Engineer, Life, Programming]
+  keywords:
+    [
+      Blog,
+      IIT,
+      College,
+      COVID,
+      Technology,
+      Programming,
+      Open Source,
+      Microsoft,
+      Bitcoin,
+      Software Engineer,
+      Life,
+      Programming,
+    ]
   author: Lakshya Singh
   images: ["programmer.jpeg"]
   DateFormat: "January 2, 2006"
@@ -75,12 +89,11 @@ params:
   homeInfoParams:
     Title: "king-11"
     Content: >
-        Welcome to my blog, where I write about my journey backpacking through terrains of the physical and digital realms.
+      Welcome to my blog, where I write about my journey backpacking through terrains of the physical and digital realms.
 
-        - I write about technical things like programming languages, bitcoin, open source software, etc but that's not all I also write about non-technical things like my life, my thoughts, my experiences, etc.
+      - I write about technical things like programming languages, bitcoin, open source software, etc but that's not all I also write about non-technical things like my life, my thoughts, my experiences, etc.
 
-        - I usually try to be brief, but sometimes it can turn in TL;DR!
-
+      - I usually try to be brief, but sometimes it can turn in TL;DR!
 
   socialIcons:
     - name: gitlab
@@ -95,7 +108,6 @@ params:
       url: "https://instagram.com/cryptic_sniper"
     - name: rss
       url: "https://blog.king-11.dev/index.xml"
-
 
   cover:
     hidden: true # hide everywhere but not in structured data
