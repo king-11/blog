@@ -47,7 +47,8 @@ This allows for two really nice things:
 - faster iterations 🚄 to you without being blocked on reviews
 - reviewers are more willing 🕊️ to provide early reviews without procrastination
 
->[!tip] Reviewers also are able to better job if you PR is less than *500* lines so that they can retain full context with them.
+>[!tip]
+>Reviewers also are able to better job if you PR is less than *500* lines so that they can retain full context with them.
 
 ## Merging and Rebasing
 Now what happens next is your first PR, with `feature-1` will get reviewed and merged into `main` in a squash and merge manner.
@@ -71,7 +72,8 @@ gitGraph
   commit
 ```
 
->[!error] Now the issue that happens is we will encounter all the changes that happened in `feature-1` as a merge conflict while rebasing `feature-2` onto `main`.
+>[!error]
+>Now the issue that happens is we will encounter all the changes that happened in `feature-1` as a merge conflict while rebasing `feature-2` onto `main`.
 
 ### Why do conflicts arise?
 I was *flabbergasted* to see this happening at first because, if the contents are exactly the same, how can a merge conflict happen?
@@ -80,12 +82,14 @@ Evidently it can, because when doing a squash and merge we lost all the commits 
 
 The conflict is basically asking you which commit do you prefer, the squash one or the original commit even if they have the same content. So now you make use of your shiny editor like **vscode** or **intellij** to resolve them. If you are a *1000x* programmer you might also be using `vim` or [mergetool](https://git-scm.com/docs/git-mergetool)
 
->[!note] After you have rebased your branch on `main` you will still see the commits from `feature-1` in `feature-2` but these are phantom commits. They don't have any content now given the base i.e. `main` already had them.
+>[!note]
+>After you have rebased your branch on `main` you will still see the commits from `feature-1` in `feature-2` but these are phantom commits. They don't have any content now given the base i.e. `main` already had them.
 
 ## How to solve it?
 There are multiple ways to do this natively using `git` without making use of external tooling, but for the sake of completeness I will cover both of them.
 
->[!quote] I generally prefer working with things in the purest form without any form of abstraction so that when things start crashing I know exactly what's going wrong under the hood.
+>[!quote]
+>I generally prefer working with things in the purest form without any form of abstraction so that when things start crashing I know exactly what's going wrong under the hood.
 
 ### Additional Merge
 This is the one which has worked best for me till now.
@@ -124,7 +128,7 @@ So here is what happened in the above diagram looking like tributaries of Ganga:
 
 This is definitely an involved process but it works the best of all in scenarios I have encountered till now.
 
-### Using additional parameters
+### Using `onto`
 I came across a stackoverflow [answer](https://stackoverflow.com/a/68230162) and blog [post](https://www.putzisan.com/articles/resolving-merge-conflicts-rebasing-stacked-branches) that cover this particular approach which is far more simple.
 
 So instead of using,
@@ -142,7 +146,15 @@ git rebase --onto main feature-1
 
 By specifying `onto` you instruct git to take commits from `feature-2` that are not in `feature-1` and rebase them on top of `main`.
 
-Why didn't I talk about this first? Well because I tried it and in some complex cases it failed to provide good results.
+It need not necessarily be a branch name its `commitish`, so we can give a commit hash. It would then rebase commits after that particular commit on top of the `main`.
+```bash
+git checkout feature-2
+git rebase --onto main <COMMIT_HEAD_FEATURE_1>
+```
+~~Why didn't I talk about this first? Well because I tried it and in some complex cases it failed to provide good results.~~
+
+>[!success]
+>I have been trying this now and it actually works very well for rebasing stacked PRs. The only caveat is if you change commit of a base branch you need to resolve merge conflict, new commits work fine.
 
 ## Bonus Treat
 This is a tool which was recommended to me in the onboarding docs of my organisation ~~but I didn't~~. [Git Town](https://www.git-town.com/) is an abstraction on top of `git` by wrapping a lot of our workflows into commands.
@@ -152,6 +164,9 @@ Things like [sync](https://www.git-town.com/commands/sync.html), [hack](https://
 It makes use of the [using additional parameters](#using-additional-parameters) strategy as described in this [issue](https://github.com/git-town/git-town/issues/4189).
 
 Git town seems pretty cool TBH and can reduce a lot of time for me in doing these things myself. I might just give it a try 😉, also because the creator [Kevin Goslar](https://github.com/kevgo) seems like a pretty cool guy ~~do stalk him~~.
+
+>[!warning]
+>I tried making use of git town for sometime and while the tool handles commands that am planning to perform, it does a lot of additional work to be safe like fetching from remote and rebasing everything again which takes time that I find hard to bear.
 
 ## Conclusion
 Thanks for reading through, I hope this helps you in the organisation that you are working in to *save some time* and use it for coding using whatever new shiny LLM is in the market right now.
